@@ -23,9 +23,9 @@ import onnxruntime
 
 class ONNXModel():
     def __init__(self, onnx_file):
-        # self.onnx_session = onnxruntime.InferenceSession(onnx_file, providers=[ 'CUDAExecutionProvider',
-        #                                                    'CPUExecutionProvider'])
-        self.onnx_session = onnxruntime.InferenceSession(onnx_file)
+        self.onnx_session = onnxruntime.InferenceSession(onnx_file, providers=[ 'CUDAExecutionProvider',
+                                                            'CPUExecutionProvider'])
+        #self.onnx_session = onnxruntime.InferenceSession(onnx_file)
 
         self.input_name = self.get_input_name(self.onnx_session)
         self.output_name = self.get_output_name(self.onnx_session)

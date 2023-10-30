@@ -250,3 +250,4 @@ example/init_result
 logs/
 *.pyc
 .idea
+weights/
